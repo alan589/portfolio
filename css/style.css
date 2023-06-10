@@ -48,7 +48,6 @@ h1 {
   align-items: center;
 }
 
-
 /* HEADER */
 .header {
   display: flex;
@@ -197,6 +196,21 @@ h1 svg path {
   transition: all 0.3s;
 }
 
+.nav__item svg {
+  width: 3rem;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+.nav__item svg path {
+  fill: #fff;
+}
+
+.nav__item.sticky svg path {
+  fill: #521e81;
+}
 
 /* PROJECTS CONTAINER */
 #projects {
@@ -249,15 +263,12 @@ h1 svg path {
   transform: scale(1.1);
 }
 
-
-
 /* PARTICLE EFFECT */
 #particles-container {
   position: absolute;
   width: 100vw;
   height: 100vh;
 }
-
 
 /* DESKTOP MEDIA QUERY */
 @media (min-width: 700px) {

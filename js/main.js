@@ -45,7 +45,7 @@ const textos = [
   "Sou um desenvolvedor front-end",
   "Estudante de análise de sistemas",
   "Sou apaixonado por tecnologia",
-  "Já fiz diversos cursos na área de programação"
+  "Já fiz diversos cursos na área de programação",
 ];
 let contador = 0;
 typeWriter();
@@ -65,6 +65,9 @@ const handleHover = function (e) {
   }
 };
 const nav = document.querySelector(".nav");
+const moon = document.querySelector(".moon");
+const sun = document.querySelector(".sun");
+
 // Passing "argument" into handler
 nav.addEventListener("mouseover", handleHover.bind(0.5));
 nav.addEventListener("mouseout", handleHover.bind(1));
@@ -83,9 +86,13 @@ const stickyNav = function (entries) {
   if (!entry.isIntersecting) {
     changeStyle(0.5, navHeight);
     nav.classList.add("sticky");
+    sun.classList.add('sticky')
+    moon.classList.add('sticky')
   } else {
     changeStyle(0, 0);
     nav.classList.remove("sticky");
+    sun.classList.remove('sticky')
+    moon.classList.remove('sticky')
   }
 };
 
@@ -100,3 +107,34 @@ createObserver(header, stickyNav, {
   threshold: 0,
   rootMargin: `-${navHeight}px`,
 });
+
+
+moon.onclick = () => {
+  sun.classList.remove("hide");
+  moon.classList.add("hide");
+
+  document.documentElement.style.setProperty("--bg-color", "#1c1917");
+  document.documentElement.style.setProperty("--bg-color-projects", "#292624");
+};
+
+sun.onclick = () => {
+  moon.classList.remove("hide");
+  sun.classList.add("hide");
+
+  document.documentElement.style.setProperty(
+    "--bg-color",
+    `linear-gradient(
+    90deg,
+    rgb(41 38 51) 0%,
+    rgba(80, 42, 145, 1) 100%)`
+  );
+
+  document.documentElement.style.setProperty(
+    "--bg-color-projects",
+    `linear-gradient(
+    180deg,
+    rgba(128, 97, 155, 1) 0%,
+    rgba(166, 147, 182, 1) 48%
+  )`
+  );
+};
