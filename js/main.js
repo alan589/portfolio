@@ -112,9 +112,10 @@ createObserver(header, stickyNav, {
 moon.onclick = () => {
   sun.classList.remove("hide");
   moon.classList.add("hide");
-
+  
   document.documentElement.style.setProperty("--bg-color", "#1c1917");
   document.documentElement.style.setProperty("--bg-color-projects", "#292624");
+  document.documentElement.style.setProperty("--nav-default-color", "#292624");
 };
 
 sun.onclick = () => {
@@ -137,4 +138,5 @@ sun.onclick = () => {
     rgba(166, 147, 182, 1) 48%
   )`
   );
+  document.documentElement.style.setProperty("--nav-default-color", "#4a2a81");
 };
