@@ -36,9 +36,16 @@ function typeWriterReverse(texto) {
 particlesJS.load("particles-container", "particlesjs-config.json");
 
 const textoElement = document.querySelector("#texto");
+// const textos = [
+//   "Sou um desenvolvedor front-end. Estudante de análise de sistemas.",
+//   "Sou apaixonado por tecnologia. Tenho feito diversos cursos na área de programação.",
+// ];
+
 const textos = [
-  "Sou um desenvolvedor front-end. Estudante de análise de sistemas.",
-  "Sou apaixonado por tecnologia. Tenho feito diversos cursos na área de programação.",
+  "Sou um desenvolvedor front-end",
+  "Estudante de análise de sistemas",
+  "Sou apaixonado por tecnologia",
+  "Já fiz diversos cursos na área de programação"
 ];
 let contador = 0;
 typeWriter();
