@@ -226,6 +226,22 @@ h1 svg path {
   padding: 7rem 3rem;
 }
 
+
+.project-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 10rem;
+}
+.project-title span {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.project-title svg {
+  width: 3rem;
+}
 .grid-item {
   display: flex;
   flex-direction: column;

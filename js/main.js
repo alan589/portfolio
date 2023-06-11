@@ -44,8 +44,7 @@ const textoElement = document.querySelector("#texto");
 const textos = [
   "Sou um desenvolvedor front-end",
   "Estudante de análise de sistemas",
-  "Sou apaixonado por tecnologia",
-  "Já fiz diversos cursos na área de programação",
+  "Sou apaixonado por tecnologia"
 ];
 let contador = 0;
 typeWriter();
